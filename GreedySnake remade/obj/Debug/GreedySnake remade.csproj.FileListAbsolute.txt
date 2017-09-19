@@ -1,0 +1,15 @@
+C:\OneDrive\projects\windows\GreedySnake remade\GreedySnake remade\obj\Debug\GreedySnake remade.csprojResolveAssemblyReference.cache
+C:\OneDrive\projects\windows\GreedySnake remade\GreedySnake remade\obj\Debug\MainWindow.g.cs
+C:\OneDrive\projects\windows\GreedySnake remade\GreedySnake remade\obj\Debug\App.g.cs
+C:\OneDrive\projects\windows\GreedySnake remade\GreedySnake remade\obj\Debug\MainWindow.baml
+C:\OneDrive\projects\windows\GreedySnake remade\GreedySnake remade\obj\Debug\GreedySnake_remade.Properties.Resources.resources
+C:\OneDrive\projects\windows\GreedySnake remade\GreedySnake remade\obj\Debug\GreedySnake remade.csproj.GenerateResource.Cache
+C:\OneDrive\projects\windows\GreedySnake remade\GreedySnake remade\obj\Debug\GreedySnake remade.csproj.CoreCompileInputs.cache
+C:\OneDrive\projects\windows\GreedySnake remade\GreedySnake remade\obj\Debug\GreedySnake_MarkupCompile.cache
+C:\OneDrive\projects\windows\GreedySnake remade\GreedySnake remade\obj\Debug\GreedySnake_MarkupCompile.lref
+C:\OneDrive\projects\windows\GreedySnake remade\GreedySnake remade\bin\Debug\GreedySnake.exe.config
+C:\OneDrive\projects\windows\GreedySnake remade\GreedySnake remade\bin\Debug\GreedySnake.exe
+C:\OneDrive\projects\windows\GreedySnake remade\GreedySnake remade\bin\Debug\GreedySnake.pdb
+C:\OneDrive\projects\windows\GreedySnake remade\GreedySnake remade\obj\Debug\GreedySnake.g.resources
+C:\OneDrive\projects\windows\GreedySnake remade\GreedySnake remade\obj\Debug\GreedySnake.exe
+C:\OneDrive\projects\windows\GreedySnake remade\GreedySnake remade\obj\Debug\GreedySnake.pdb
