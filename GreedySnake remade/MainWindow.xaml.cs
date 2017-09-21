@@ -112,7 +112,13 @@ namespace GreedySnake_remade
                     if (nxt.x != apple.x || nxt.y != apple.y)
                         snake.pop();
                     else
+                    {
                         setApple();
+                        for (int i = 0; i < sldGrowth.Value - 1; i++)
+                        {
+                            snake.append(nxt);
+                        }
+                    }
                 }
             }
         }
@@ -228,11 +234,6 @@ namespace GreedySnake_remade
         {
             rects = new Rectangle[size, size];
             for (int i = 0; i < size; i++)
-            {
-                mainGrid.RowDefinitions.Add(new RowDefinition());
-                mainGrid.ColumnDefinitions.Add(new ColumnDefinition());
-            }
-            for (int i = 0; i < size; i++)
                 for (int j = 0; j < size; j++)
                 {
                     rects[i, j] = new Rectangle
@@ -251,10 +252,10 @@ namespace GreedySnake_remade
 
         class snakeQueue
         {
-            private Point[] points;
-            private int length = 0;
-            private int head = -1;
-            private int tail = 0;
+            Point[] points;
+            int length = 0;
+            int head = -1;
+            int tail = 0;
             Rectangle[,] rects;
             HashSet<Point> used;
             SolidColorBrush brush;
