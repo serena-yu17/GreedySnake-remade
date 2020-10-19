@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GreedySnake_remade"
         mc:Ignorable="d"
-        Title="Greedy snake" Height="650" Width="800" FontSize="18">
+        Title="Greedy snake" Height="650" Width="800" FontSize="18" Loaded="Window_Loaded">
     <Grid x:Name="mainGrid" Margin="5,5,5,5" Width="600" Height="600" HorizontalAlignment="Left" VerticalAlignment="Bottom" >
         <Grid.RowDefinitions>
             <RowDefinition Height="15"/>
@@ -98,33 +98,25 @@
         <Label Name="lbGameOver" Content="Game Over" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="50" Width="529.6" Margin="0,0,0,0"
                    HorizontalContentAlignment="Center" FontFamily="Century Gothic" FontStretch="Expanded" VerticalContentAlignment="Center"
                Visibility="Hidden" Background="Beige" Grid.ColumnSpan="36" Height="104.8" Grid.RowSpan="8" Grid.Column="2" Grid.Row="15" Panel.ZIndex="1"/>
-        <Slider x:Name="sldSpd" Margin="0,8.177,-158.8,0" VerticalAlignment="Top" Height="28.8"   Grid.Column="39"
-            TickFrequency="1" IsSnapToTickEnabled="True" ValueChanged="sldSpd_ValueChanged" Maximum="4" Minimum="1" HorizontalAlignment="Right" Width="146" Grid.Row="15" Grid.RowSpan="3"/>
-        <Label Content="Speed" Margin="0,15.176,-140,0" VerticalAlignment="Top"   Grid.Column="39"
-            HorizontalContentAlignment="Center" HorizontalAlignment="Right" Width="100" Grid.Row="12" Grid.RowSpan="4" Height="38.401"/>
-        <Label Content="1" Margin="0,11.976,-44,0" VerticalAlignment="Top"  HorizontalAlignment="Right" Width="31" Grid.Column="39" Grid.Row="16" Grid.RowSpan="3"/>
-        <Label Content="2" Margin="0,11.976,-89,0" VerticalAlignment="Top"  HorizontalAlignment="Right" Width="29" Grid.Column="39" Grid.Row="16" Grid.RowSpan="3"/>
-        <Label Content="3" Margin="0,11.976,-130,0" VerticalAlignment="Top"  HorizontalAlignment="Right" Width="29" Grid.Column="39" Grid.Row="16" Grid.RowSpan="3"/>
-        <Label Content="4" HorizontalAlignment="Right" Margin="0,11.976,-170.8,0" VerticalAlignment="Top" Width="29" Grid.Column="39" Grid.Row="16" Grid.RowSpan="3" Height="32.2"/>
-        <Slider x:Name="sldOb" Margin="0,8.777,-158.8,0" VerticalAlignment="Top" Height="29.6" Grid.Column="39" 
-            TickFrequency="1" IsSnapToTickEnabled="True" ValueChanged="sldOb_ValueChanged" Maximum="2" Minimum="0" HorizontalAlignment="Right" Width="146" Grid.Row="23" Grid.RowSpan="3"/>
-        <Label Content="Obstacle difficulty" Margin="0,5.977,-163,0" VerticalAlignment="Top"  Grid.Column="39"
-            HorizontalContentAlignment="Center" HorizontalAlignment="Right" Width="155.8" Grid.Row="20" Grid.RowSpan="3" Height="34.4"/>
-        <Label Content="0" Margin="0,13.777,-44,0" VerticalAlignment="Top"  HorizontalAlignment="Right" Width="31" Grid.Column="39" Grid.Row="24" Grid.RowSpan="4" Height="37.6"/>
-        <Label Content="2" HorizontalAlignment="Right" Margin="0,13.777,-108,0" VerticalAlignment="Top" Width="29"  Grid.Column="39" Grid.Row="24" Grid.RowSpan="4" Height="37.6"/>
-        <Label Content="4" HorizontalAlignment="Right" Margin="0,13.377,-163.4,0" VerticalAlignment="Top" Width="22"  Grid.Column="39" Grid.Row="24" Height="31.4" Grid.RowSpan="3"/>
-        <CheckBox Name="chkWrap" Content="Wrap on borders" Margin="0,5.977,-167.8,0" VerticalAlignment="Top" 
+        <Slider x:Name="sldSpd" Margin="0,2,-163,0" VerticalAlignment="Top" Height="29"   Grid.Column="39"
+            TickFrequency="1" IsSnapToTickEnabled="True" ValueChanged="SldSpd_ValueChanged" Maximum="4" Minimum="1" HorizontalAlignment="Right" Width="146" Grid.Row="17" Grid.RowSpan="3"/>
+        <Label Content="Speed" Margin="0,9,-144,0" VerticalAlignment="Top"   Grid.Column="39"
+            HorizontalContentAlignment="Center" HorizontalAlignment="Right" Width="100" Grid.Row="14" Grid.RowSpan="4" Height="38"/>
+        <Label Content="1" Margin="0,6,-48,0" VerticalAlignment="Top"  HorizontalAlignment="Right" Width="31" Grid.Column="39" Grid.Row="18" Grid.RowSpan="3"/>
+        <Label Content="2" Margin="0,6,-93,0" VerticalAlignment="Top"  HorizontalAlignment="Right" Width="29" Grid.Column="39" Grid.Row="18" Grid.RowSpan="3"/>
+        <Label Content="3" Margin="0,6,-134,0" VerticalAlignment="Top"  HorizontalAlignment="Right" Width="29" Grid.Column="39" Grid.Row="18" Grid.RowSpan="3"/>
+        <Label Content="4" HorizontalAlignment="Right" Margin="0,6,-175,0" VerticalAlignment="Top" Width="29" Grid.Column="39" Grid.Row="18" Grid.RowSpan="3" Height="32"/>
+        <Slider x:Name="sldOb" Margin="0,1,-163,0" VerticalAlignment="Top" Height="30" Grid.Column="39" 
+            TickFrequency="1" IsSnapToTickEnabled="True" ValueChanged="SldOb_ValueChanged" Maximum="2" Minimum="0" HorizontalAlignment="Right" Width="146" Grid.Row="28" Grid.RowSpan="3"/>
+        <Label Content="Obstacle difficulty" Margin="0,13,-167,0" VerticalAlignment="Top"  Grid.Column="39"
+            HorizontalContentAlignment="Center" HorizontalAlignment="Right" Width="155" Grid.Row="24" Grid.RowSpan="4" Height="35"/>
+        <Label Content="0" Margin="0,6,-48,0" VerticalAlignment="Top"  HorizontalAlignment="Right" Width="31" Grid.Column="39" Grid.Row="29" Grid.RowSpan="3" Height="38"/>
+        <Label Content="2" HorizontalAlignment="Right" Margin="0,6,-112,0" VerticalAlignment="Top" Width="29"  Grid.Column="39" Grid.Row="29" Grid.RowSpan="3" Height="38"/>
+        <Label Content="4" HorizontalAlignment="Right" Margin="0,6,-168,0" VerticalAlignment="Top" Width="22"  Grid.Column="39" Grid.Row="29" Height="31" Grid.RowSpan="3"/>
+        <CheckBox Name="chkWrap" Content="Run through &#xD;&#xA;borders" Margin="0,3,-168,0" VerticalAlignment="Top" 
                   VerticalContentAlignment="Center" IsChecked="True"  Grid.Column="39"
-                      Height="31" HorizontalAlignment="Right" Width="160.6" Checked="chkWrap_Checked" Unchecked="chkWrap_Checked" HorizontalContentAlignment="Center" Grid.Row="8" Grid.RowSpan="3"/>
+                      Height="64" HorizontalAlignment="Right" Width="161" Checked="ChkWrap_Checked" Unchecked="ChkWrap_Checked" HorizontalContentAlignment="Center" Grid.Row="7" Grid.RowSpan="5"/>
         <Label Content="Press Esc to reset" Height="54" Margin="0,12.777,-182.8,0"   Grid.Column="39" 
                VerticalAlignment="Top" HorizontalContentAlignment="Center" HorizontalAlignment="Right" Width="180" Grid.Row="1" Grid.RowSpan="5" />
-        <Slider x:Name="sldGrowth" Margin="0,6.177,-158.8,0" VerticalAlignment="Top" Height="29.6"  Grid.Column="39"
-            TickFrequency="1" IsSnapToTickEnabled="True" Minimum="1" Maximum="4"  HorizontalAlignment="Right" Width="146" Grid.Row="31" Grid.RowSpan="3"/>
-        <Label Content="Growth" Margin="0,12.176,-163,0" VerticalAlignment="Top"  Grid.Column="39"
-            HorizontalContentAlignment="Center" HorizontalAlignment="Right" Width="155.8" Grid.Row="28" Grid.RowSpan="4" Height="34.201"/>
-        <Label Content="1" Margin="0,5.576,-44,0" VerticalAlignment="Top"  HorizontalAlignment="Right" Width="31" Grid.Column="39" Grid.Row="33" Grid.RowSpan="4" Height="40.8"/>
-        <Label Content="2" Margin="0,5.376,-83.066,0" VerticalAlignment="Top"  HorizontalAlignment="Right" Width="29" Grid.Column="39" Grid.Row="33" Grid.RowSpan="4" Height="40.6"/>
-        <Label Content="3" Margin="0,5.776,-129.4,0" VerticalAlignment="Top"  HorizontalAlignment="Right" Width="29" Grid.Column="39" Grid.Row="33" Grid.RowSpan="4" Height="40.4"/>
-        <Label Content="4" Margin="0,5.376,-168,0" VerticalAlignment="Top"  HorizontalAlignment="Right" Width="29" Grid.Column="39" Grid.Row="33" Grid.RowSpan="4" Height="40.4"/>
     </Grid>
 </Window>

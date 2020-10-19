@@ -12,3 +12,10 @@ C:\OneDrive\projects\windows\GreedySnake remade\GreedySnake remade\obj\Release\G
 C:\OneDrive\projects\windows\GreedySnake remade\GreedySnake remade\obj\Release\GreedySnake remade.csproj.CoreCompileInputs.cache
 C:\OneDrive\projects\windows\GreedySnake remade\GreedySnake remade\obj\Release\GreedySnake.exe
 C:\OneDrive\projects\windows\GreedySnake remade\GreedySnake remade\obj\Release\GreedySnake.pdb
+E:\Projects\GreedySnake-remade\GreedySnake remade\obj\Release\GreedySnake remade.csprojAssemblyReference.cache
+E:\Projects\GreedySnake-remade\GreedySnake remade\obj\Release\MainWindow.g.cs
+E:\Projects\GreedySnake-remade\GreedySnake remade\obj\Release\App.g.cs
+E:\Projects\GreedySnake-remade\GreedySnake remade\obj\Release\GreedySnake_MarkupCompile.cache
+E:\Projects\GreedySnake-remade\GreedySnake remade\obj\Release\GreedySnake_MarkupCompile.lref
+E:\Projects\GreedySnake-remade\GreedySnake remade\obj\Release\GreedySnake.exe
+E:\Projects\GreedySnake-remade\GreedySnake remade\obj\Release\GreedySnake.pdb
