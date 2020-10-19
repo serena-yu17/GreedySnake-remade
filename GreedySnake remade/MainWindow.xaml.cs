@@ -1,8 +1,8 @@
-﻿using GreedySnake_remade.components;
+﻿using GreedySnake.components;
 using System.Windows;
 using System.Windows.Input;
 
-namespace GreedySnake_remade
+namespace GreedySnake
 {
     public partial class MainWindow : Window
     {
@@ -32,6 +32,7 @@ namespace GreedySnake_remade
 
         private void PrepareGame()
         {
+            game?.Dispose();
             game = new Game(
                 size,
                 interval,
@@ -43,14 +44,16 @@ namespace GreedySnake_remade
                 ShowGameOverText,
                 UpdateLayout
             );
-            game.GamePrepare();
+            game.Prepare();
         }
 
         private void KickStart()
         {
             lbGameOver.Visibility = Visibility.Hidden;
             sldOb.IsEnabled = false;
-            game.GameStart();
+            chkWrap.IsEnabled = false;
+            sldSpd.IsEnabled = false;
+            game.Start();
         }
 
         private void HandleKeyDown(object sender, KeyEventArgs e)
@@ -86,7 +89,10 @@ namespace GreedySnake_remade
         void SldSpd_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             interval = baseInterval / sldSpd.Value;
-            game?.ChangeSpeed(interval);
+            if (IsLoaded)
+            {
+                game?.ChangeSpeed(interval);
+            }
         }
 
 
@@ -112,6 +118,7 @@ namespace GreedySnake_remade
         {
             chkWrap.IsEnabled = true;
             sldOb.IsEnabled = true;
+            sldSpd.IsEnabled = true;
             lbGameOver.Visibility = Visibility.Visible;
             lbGameOver.Content = "Press any key to start";
             lbGameOver.FontSize = 30;

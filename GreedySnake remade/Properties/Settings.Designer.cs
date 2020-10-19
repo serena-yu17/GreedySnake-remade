@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GreedySnake_remade.Properties {
+namespace GreedySnake.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

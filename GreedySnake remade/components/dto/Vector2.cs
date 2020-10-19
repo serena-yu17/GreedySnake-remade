@@ -1,6 +1,8 @@
-﻿namespace GreedySnake_remade.components
+﻿using System;
+
+namespace GreedySnake.components
 {
-    struct Vector2
+    struct Vector2 : IEquatable<Vector2>
     {
         public int x;
         public int y;
@@ -17,37 +19,33 @@
             y = other.y;
         }
 
-        public static bool operator ==(Vector2 pt1, Vector2 pt2)
-        {
-            return pt1.x == pt2.x && pt1.y == pt2.y;
-        }
-
-        public static bool operator !=(Vector2 pt1, Vector2 pt2)
-        {
-            return !(pt1 == pt2);
-        }
-
         public override bool Equals(object obj)
         {
-            if (obj == null)
-            {
-                return this == null;
-            }
-            if (!(obj is Vector2 p))
-            {
-                return false;
-            }
-            return (x == p.x) && (y == p.y);
+            return obj is Vector2 vector && Equals(vector);
         }
 
         public bool Equals(Vector2 other)
         {
-            return (x == other.x) && (y == other.y);
+            return x == other.x &&
+                   y == other.y;
         }
 
         public override int GetHashCode()
         {
-            return (x << 8) + y;
+            int hashCode = 1502939027;
+            hashCode = hashCode * -1521134295 + x.GetHashCode();
+            hashCode = hashCode * -1521134295 + y.GetHashCode();
+            return hashCode;
+        }
+
+        public static bool operator ==(Vector2 left, Vector2 right)
+        {
+            return left.Equals(right);
+        }
+
+        public static bool operator !=(Vector2 left, Vector2 right)
+        {
+            return !(left == right);
         }
     }
 }

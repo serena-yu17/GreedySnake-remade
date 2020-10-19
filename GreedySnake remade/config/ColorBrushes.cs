@@ -1,6 +1,6 @@
 ﻿using System.Windows.Media;
 
-namespace GreedySnake_remade.components
+namespace GreedySnake.components
 {
     static class ColorBrushes
     {

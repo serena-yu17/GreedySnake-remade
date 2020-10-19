@@ -1,0 +1,17 @@
+E:\Projects\GreedySnake-remade\GreedySnake remade\bin\Debug\GreedySnake.exe.config
+E:\Projects\GreedySnake-remade\GreedySnake remade\bin\Debug\GreedySnake.exe
+E:\Projects\GreedySnake-remade\GreedySnake remade\bin\Debug\GreedySnake.pdb
+E:\Projects\GreedySnake-remade\GreedySnake remade\bin\Debug\System.ValueTuple.dll
+E:\Projects\GreedySnake-remade\GreedySnake remade\bin\Debug\System.ValueTuple.xml
+E:\Projects\GreedySnake-remade\GreedySnake remade\obj\Debug\MainWindow.g.cs
+E:\Projects\GreedySnake-remade\GreedySnake remade\obj\Debug\App.g.cs
+E:\Projects\GreedySnake-remade\GreedySnake remade\obj\Debug\GreedySnake_MarkupCompile.cache
+E:\Projects\GreedySnake-remade\GreedySnake remade\obj\Debug\GreedySnake_MarkupCompile.lref
+E:\Projects\GreedySnake-remade\GreedySnake remade\obj\Debug\MainWindow.baml
+E:\Projects\GreedySnake-remade\GreedySnake remade\obj\Debug\GreedySnake.g.resources
+E:\Projects\GreedySnake-remade\GreedySnake remade\obj\Debug\GreedySnake_remade.Properties.Resources.resources
+E:\Projects\GreedySnake-remade\GreedySnake remade\obj\Debug\GreedySnake.csproj.GenerateResource.cache
+E:\Projects\GreedySnake-remade\GreedySnake remade\obj\Debug\GreedySnake.csproj.CoreCompileInputs.cache
+E:\Projects\GreedySnake-remade\GreedySnake remade\obj\Debug\GreedySnake.csproj.CopyComplete
+E:\Projects\GreedySnake-remade\GreedySnake remade\obj\Debug\GreedySnake.exe
+E:\Projects\GreedySnake-remade\GreedySnake remade\obj\Debug\GreedySnake.pdb

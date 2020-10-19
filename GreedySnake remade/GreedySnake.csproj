@@ -72,6 +72,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="components\dto\Block.cs" />
+    <Compile Include="components\dto\GameRunResult.cs" />
     <Compile Include="config\ColorBrushes.cs" />
     <Compile Include="config\DirectionControl.cs" />
     <Compile Include="components\RoundController.cs" />
@@ -79,7 +80,7 @@
     <Compile Include="components\GameBoard.cs" />
     <Compile Include="components\UIboard.cs" />
     <Compile Include="components\dto\Vector2.cs" />
-    <Compile Include="components\dto\BlockChain.cs" />
+    <Compile Include="components\dto\BlockGroup.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

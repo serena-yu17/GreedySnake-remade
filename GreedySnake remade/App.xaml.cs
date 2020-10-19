@@ -5,7 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Windows;
 
-namespace GreedySnake_remade
+namespace GreedySnake
 {
     /// <summary>
     /// Interaction logic for App.xaml

@@ -1,4 +1,4 @@
-﻿namespace GreedySnake_remade.components
+﻿namespace GreedySnake.components
 {
     static class DirectionControl
     {

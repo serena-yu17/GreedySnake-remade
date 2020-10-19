@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Windows.Controls;
 using System.Windows.Threading;
 
-namespace GreedySnake_remade.components
+namespace GreedySnake.components
 {
-    class Game
+    class Game : IDisposable
     {
+        private const int gameoverDelay = 2;
         private readonly Action showGameStartText;
         private readonly Action showGameOverText;
         private readonly Action updateLayout;
@@ -38,8 +38,9 @@ namespace GreedySnake_remade.components
             gameBoard = new GameBoard(size, wrap, obLevel, defaultDirection);
         }
 
-        public void GamePrepare()
+        public void Prepare()
         {
+            gameBoard.Init();
             uiBoard.Reset();
 
             GameStatus = GameStatus.Prepare;
@@ -64,41 +65,73 @@ namespace GreedySnake_remade.components
             roundControl.UpdateInterval(interval);
         }
 
-        public void GameStart()
+        public void Start()
         {
             GameStatus = GameStatus.Running;
             roundControl.Start();
         }
 
-        public void GameOver()
+        public void Over()
         {
             showGameOverText();
             GameStatus = GameStatus.Stopped;
 
             roundControl.Reset();
 
-            // After 3 seconds, start game again.
-            var nextRound = new DispatcherTimer { Interval = TimeSpan.FromSeconds(3) };
+            // After {gameoverDelay} seconds, start game again.
+            var nextRound = new DispatcherTimer { Interval = TimeSpan.FromSeconds(gameoverDelay) };
             nextRound.Start();
             nextRound.Tick += (sender, args) =>
             {
                 nextRound.Stop();
-                GamePrepare();
+                Prepare();
             };
         }
 
         public void Progress()
         {
             var run = gameBoard.Progress();
-            if (!run.isRunning)
+            if (!run.success)
             {
-                GameOver();
+                Over();
             }
             else
             {
-                run.blocksToUpdate.ForEach(uiBoard.RenderBlock);
+                foreach (var block in run.blocksToUpdate)
+                {
+                    uiBoard.RenderBlock(block);
+                }
                 updateLayout();
             }
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposedValue)
+            {
+                if (disposing)
+                {
+                    roundControl.Reset();
+                }
+
+                // TODO: free unmanaged resources (unmanaged objects) and override finalizer
+                // TODO: set large fields to null
+                disposedValue = true;
+            }
+        }
+
+        // // TODO: override finalizer only if 'Dispose(bool disposing)' has code to free unmanaged resources
+        // ~Game()
+        // {
+        //     // Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
+        //     Dispose(disposing: false);
+        // }
+
+        public void Dispose()
+        {
+            // Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
+            Dispose(disposing: true);
+            GC.SuppressFinalize(this);
         }
     }
 

@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using System.Windows.Threading;
 
-namespace GreedySnake_remade.components
+namespace GreedySnake.components
 {
     class RoundController
     {
         private readonly DispatcherTimer gameTimer;
-        private uint eid = 0;
 
-        public Dictionary<uint, EventHandler> events = new Dictionary<uint, EventHandler>();
+        public List<EventHandler> eventHandlers = new List<EventHandler>();
 
         public RoundController(double intervalMillis)
         {
@@ -43,33 +42,20 @@ namespace GreedySnake_remade.components
             gameTimer.Interval = TimeSpan.FromMilliseconds(intervalMillis);
         }
 
-        public uint RegisterEvent(EventHandler eventHandler)
+        public void RegisterEvent(EventHandler eventHandler)
         {
-            events[eid] = eventHandler;
-            eid++;
+            eventHandlers.Add(eventHandler);
             gameTimer.Tick += eventHandler;
-            return eid;
-        }
-
-        public void RemoveEvent(uint eid)
-        {
-            events.TryGetValue(eid, out var eventHandler);
-            if (eventHandler != null)
-            {
-                gameTimer.Tick -= eventHandler;
-            }
-            events.Remove(eid);
         }
 
         public void Reset()
         {
             Stop();
-            foreach (var kp in events)
+            foreach (var eh in eventHandlers)
             {
-                gameTimer.Tick -= kp.Value;
+                gameTimer.Tick -= eh;
             }
-            events.Clear();
-            eid = 0;
+            eventHandlers.Clear();
         }
     }
 }

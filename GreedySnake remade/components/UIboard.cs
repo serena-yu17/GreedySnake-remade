@@ -2,7 +2,7 @@
 using System.Windows.Controls;
 using System.Windows.Shapes;
 
-namespace GreedySnake_remade.components
+namespace GreedySnake.components
 {
     class UIboard
     {
